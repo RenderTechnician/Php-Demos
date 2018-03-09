@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<link rel="stylesheet" type="text/css" href="style.css">
+</head>
+<body>
+	<div id="back">
+	<h1>PDO & Prepared Statements Sample Document Setup</h1>
+	<br><br>
+	<h2>Xampp [Localhost Server]</h2>
+	Step 1)<br> If you haven't download Xammp yet download it from <a href="https://www.apachefriends.org/index.html">here</a><br> 
+	 <br><br><img src='/PDO and prepared statements/1.png' name="image" id="image"><br><br><br>
+	Step 2)<br> Once Xampp has finished installing open the Xampp Control Panel and make sure the Apache and MySQL services are running
+	 <br><br><img src='/PDO and prepared statements/2.png' name="image" id="image"><br><br><hr>
+
+	 	<h2>SQL [Creating The Database In Commpand Prompt]</h2>
+	Step 1)<br> Open command prompt or type 'CMD.exe' into the start menu and hit enter
+	<br><br><img src='/PDO and prepared statements/3.png' name="image" id="image2"><br><br><br>
+	Step 2)<br>Type 'C:\xampp\mysql\bin\mysql -u root -p', when it prompts for a password press enter.<br>Your Command Prompt window should now look like the image below
+		<br><br><img src='/PDO and prepared statements/4.png' name="image" id="image"><br><br><br>
+	Step 3)<br>Type the following into Command Prompt. Or copy and paste each line individually (hint: it's quicker if you do this)<br><br><br>
+	 CREATE DATABASE student;<br><br>
+	 USE student;<br><br>
+	 CREATE TABLE students(<br><br>
+	 SID VARCHAR(128),<br><br>
+	 Name VARCHAR(128),<br><br>
+	 Email VARCHAR(128)) ENGINE MyISAM;<br><br><br><br>
+
+	 <h3>At this point the database has been created and you can use the page <a href="/PDO and prepared statements/Main.php">here<a> to add values to the database.</h3>
+	 <hr>
+	</div>
+</body>
+</html>
