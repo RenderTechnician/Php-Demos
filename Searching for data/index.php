@@ -67,13 +67,13 @@
 	//Insert Data Into Database
 	if (isset($_POST['Name']) && isset($_POST['Email']) && isset($_POST['SID']) && isset($_POST['Faculty'])) 
 	{
-		$sqlQuery = "INSERT INTO records VALUES(?,?,?,?)";
+		$sqlQuery = 'INSERT INTO records VALUES(?,?,?,?)';
 		$query = $dbHandler->prepare($sqlQuery);
 
-		$sid 		= 	$_POST['SID'];
-		$name 		= 	$_POST['Name'];
-		$email		=	$_POST['Email'];
-		$faculty 	=	$_POST['Faculty'];
+		$sid 		= 	filter_var($_POST['SID'], FILTER_SANITIZE_STRING);
+		$name 		= 	filter_var($_POST['Name'], FILTER_SANITIZE_STRING);
+		$email		=	filter_var($_POST['Email'], FILTER_SANITIZE_STRING);
+		$faculty 	=	filter_var($_POST['Faculty'], FILTER_SANITIZE_STRING);
 		//execute the query
 		$query->execute(array("$name","$email","$sid","$faculty"));
 		echo "<br>Data Entered Succesfully";
